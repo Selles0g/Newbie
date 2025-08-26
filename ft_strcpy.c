@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcpy.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: adselles <adselles@student.42.fr>+#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/27 00:27:47 by adselles         #+#    #+#             */
+/*   Updated: 2025/08/27 00:27:47 by adselles        ###   ########.fr     */
+/*                                                                            */
+/* ************************************************************************** */
 #include <unistd.h>
 #include <stdio.h>
 
@@ -16,8 +27,8 @@ char    *ft_strcpy(char *dest, char *src)
 
 int main(void)
 {
-    char src[] = "Hola";
-    char dest[] = "mundo";
+    char dest[] = "Blinblin";
+    char src[] = "Carli";
 
     ft_strcpy(dest, src);
     printf("%s", dest);
