@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                          :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adselles <adselles@student.42.fr>+#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/31 18:50:13 by adselles         #+#    #+#             */
-/*   Updated: 2025/08/31 18:50:13 by adselles        ###   ########.fr     */
+/*   Created: 2025/08/31 20:50:22 by adselles         #+#    #+#             */
+/*   Updated: 2025/08/31 20:50:22 by adselles        ###   ########.fr     */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-int ft_str_is_alpha (char *str)
+int	ft_str_is_numeric(char *str)
 {
-    int i;
-    i = 0;
-    while (str[i])
-    {
-        if ((str[i] < 'a' || str[i] > 'z') && (str[i] < 'A' || str[i] > 'Z'))
-            return (0);
-        i++;
-    }
-    return (1);
-}
+	int	i;
 
-int main(void)
-{
-    printf("%d\n", ft_str_is_alpha("Hola"));
-    printf("%d\n", ft_str_is_alpha("dih2"));
-    printf("%d\n", ft_str_is_alpha(""));
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] < '0' || str[i] > '9')
+			return (0);
+		i++;
+	}
+	return (1);
 }
