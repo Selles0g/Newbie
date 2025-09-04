@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                          :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adselles <adselles@student.42.fr>+#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/04 07:58:45 by adselles         #+#    #+#             */
-/*   Updated: 2025/09/04 07:58:45 by adselles        ###   ########.fr     */
+/*   Created: 2025/09/03 06:53:51 by adselles         #+#    #+#             */
+/*   Updated: 2025/09/03 06:53:51 by adselles        ###   ########.fr     */
 /*                                                                            */
 /* ************************************************************************** */
-
-int     ft_str_is_alpha(char *str)
+int	ft_str_is_uppercase(char *str)
 {
-        int     i;
+	int	i;
 
-        i = 0;
-        while (str[i])
-        {
-                if ((str[i] < 'a' || str[i] > 'z') && (str[i] < 'A' || str[i] > 'Z'))
-                        return (0);
-                i++;
-        }
-        return (1);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] >= 'A' && str[i] <= 'Z')
+		{
+			i++;
+		}
+		else
+		{
+			return (0);
+		}
+	}
+	return (1);
 }
